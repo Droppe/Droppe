@@ -1,0 +1,85 @@
+@import 'application';
+
+#stream {
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  @include clearfix;
+  &.__FLOW__ {
+    overflow: visible;
+  }
+}
+
+#stream > .article {
+  @include span-columns(12, 12);
+  @include at-breakpoint(600px 12) {
+    @include span-columns(6, 12);
+  }
+  @include at-breakpoint(960px 12) {
+    @include span-columns(4, 12);
+  }
+  @include at-breakpoint(1280px 12) {
+    @include span-columns(3, 12);
+  }
+  position: absolute;
+  .body {
+    margin: .6rem;
+    background-color: $snow;
+    @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.15), -1px 0 0 rgba(0, 0, 0, 0.03), 1px 0 0 rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.12));
+  }
+  .meta {
+    line-height: 2.4rem;
+    border-top: 1px solid $mercury;
+    padding: 0 1.2rem;
+  }
+  &:first-child {
+    @include at-breakpoint(960px 12) {
+      @include span-columns(8, 12);
+    }
+    @include at-breakpoint(1280px 12) {
+      @include span-columns(6, 12);
+    }
+  }
+}
+
+#stream > .article.link {
+  .image {
+    display: block;
+    width: 100%;
+    height: 234px;
+    overflow: hidden;
+    background-color: $tungsten;
+    background-position: center center;
+    background-size: cover;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-top: 100%;
+    }
+  }
+  .content {
+    @include clearfix;
+    padding: 0 1.2rem;
+  }
+}
+
+#stream > .article.video {
+  .body {
+    line-height: 0;
+  }
+  iframe {
+    width: 100%;
+  }
+}
+#stream > .article.photo {
+  .body, .image {
+    line-height: 0;
+  }
+  .image {
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+}

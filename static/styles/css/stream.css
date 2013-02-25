@@ -1,0 +1,337 @@
+/* line 11, ../scss/_application.scss */
+html {
+  background-color: #efede7;
+}
+
+/* line 15, ../scss/_application.scss */
+body {
+  padding: 0;
+  font-weight: 300;
+  line-height: 1.6em;
+  color: #424242;
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 31, ../scss/_application.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  line-height: 1.2em;
+  text-shadow: 0 1px #efede7;
+  color: black;
+}
+/* line 36, ../scss/_application.scss */
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+}
+/* line 40, ../scss/_application.scss */
+h1 a:hover,
+h1 a:active,
+h2 a:hover,
+h2 a:active,
+h3 a:hover,
+h3 a:active,
+h4 a:hover,
+h4 a:active,
+h5 a:hover,
+h5 a:active,
+h6 a:hover,
+h6 a:active {
+  color: #005493;
+  text-decoration: none;
+}
+
+/* line 46, ../scss/_application.scss */
+a {
+  text-decoration: none;
+  color: #005493;
+}
+
+/* line 52, ../scss/_application.scss */
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+/* line 56, ../scss/_application.scss */
+#header {
+  -webkit-box-shadow: #797979 1px 0 1px;
+  -moz-box-shadow: #797979 1px 0 1px;
+  box-shadow: #797979 1px 0 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+/* line 63, ../scss/_application.scss */
+#header .content {
+  *zoom: 1;
+  max-width: 1600px;
+  max-width: 99.9996rem;
+  _width: 1600px;
+  padding-left: 0px;
+  padding-left: 0rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  min-width: 320px;
+}
+/* line 38, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#header .content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 67, ../scss/_application.scss */
+#header .content #droppe-branding {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  height: 2.4rem;
+  width: 2.4rem;
+  background: url("/assets/images/droppe.png") no-repeat center;
+  background-size: contain;
+  text-indent: -123456px;
+  margin: 0 0 0 0.6rem;
+}
+/* line 76, ../scss/_application.scss */
+#header .content #search {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-right: .6rem;
+}
+/* line 79, ../scss/_application.scss */
+#header .content #search .text {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 81, ../scss/_application.scss */
+#header .content #search .text input {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  height: 1.2em;
+  color: #424242;
+  border: 1px solid #efede7;
+  line-height: 1.2em;
+  padding: 0.2em 0.6em;
+  font-family: inherit;
+  -webkit-box-shadow: inset #efede7 0 0 2px;
+  -moz-box-shadow: inset #efede7 0 0 2px;
+  box-shadow: inset #efede7 0 0 2px;
+  background-color: white;
+}
+/* line 85, ../scss/_application.scss */
+#header .content #search .submit {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(0, 0, 0, 0.2)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid silver;
+  border-top-color: #d6d6d6;
+  border-left-color: #d6d6d6;
+  background-color: white;
+  color: #424242;
+  text-shadow: 0 1px white;
+  margin: 0;
+  line-height: 1.2em;
+  padding: 0.2em 0.6em;
+}
+/* line 15, ../scss/mixins/_button.scss */
+#header .content #search .submit:hover, #header .content #search .submit:active, #header .content #search .submit:focus {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.3)), color-stop(100%, rgba(0, 0, 0, 0.3)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3));
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3));
+  background: linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+/* line 93, ../scss/_application.scss */
+#page {
+  padding-top: 2.4rem;
+  width: 100%;
+  height: 100%;
+}
+/* line 97, ../scss/_application.scss */
+#page .main {
+  *zoom: 1;
+  max-width: 1600px;
+  max-width: 99.9996rem;
+  _width: 1600px;
+  padding-left: 0px;
+  padding-left: 0rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  min-width: 320px;
+}
+/* line 38, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#page .main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 3, ../scss/stream.scss */
+#stream {
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 8, ../scss/stream.scss */
+#stream.__FLOW__ {
+  overflow: visible;
+}
+
+/* line 13, ../scss/stream.scss */
+#stream > .article {
+  width: 100%;
+  float: left;
+  margin-right: 0%;
+  display: inline;
+  position: absolute;
+}
+@media (min-width: 600px) {
+  /* line 13, ../scss/stream.scss */
+  #stream > .article {
+    width: 50%;
+    float: left;
+    margin-right: 0%;
+  }
+}
+@media (min-width: 960px) {
+  /* line 13, ../scss/stream.scss */
+  #stream > .article {
+    width: 33.33333%;
+    float: left;
+    margin-right: 0%;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 13, ../scss/stream.scss */
+  #stream > .article {
+    width: 25%;
+    float: left;
+    margin-right: 0%;
+  }
+}
+/* line 25, ../scss/stream.scss */
+#stream > .article .body {
+  margin: .6rem;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), -1px 0 0 rgba(0, 0, 0, 0.03), 1px 0 0 rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), -1px 0 0 rgba(0, 0, 0, 0.03), 1px 0 0 rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), -1px 0 0 rgba(0, 0, 0, 0.03), 1px 0 0 rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.12);
+}
+/* line 30, ../scss/stream.scss */
+#stream > .article .meta {
+  line-height: 2.4rem;
+  border-top: 1px solid #efede7;
+  padding: 0 1.2rem;
+}
+@media (min-width: 960px) {
+  /* line 35, ../scss/stream.scss */
+  #stream > .article:first-child {
+    width: 66.66667%;
+    float: left;
+    margin-right: 0%;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 35, ../scss/stream.scss */
+  #stream > .article:first-child {
+    width: 50%;
+    float: left;
+    margin-right: 0%;
+  }
+}
+
+/* line 46, ../scss/stream.scss */
+#stream > .article.link .image {
+  display: block;
+  width: 100%;
+  height: 234px;
+  overflow: hidden;
+  background-color: #424242;
+  background-position: center center;
+  background-size: cover;
+}
+/* line 54, ../scss/stream.scss */
+#stream > .article.link .image a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 100%;
+}
+/* line 61, ../scss/stream.scss */
+#stream > .article.link .content {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 0 1.2rem;
+}
+
+/* line 68, ../scss/stream.scss */
+#stream > .article.video .body {
+  line-height: 0;
+}
+/* line 71, ../scss/stream.scss */
+#stream > .article.video iframe {
+  width: 100%;
+}
+
+/* line 76, ../scss/stream.scss */
+#stream > .article.photo .body, #stream > .article.photo .image {
+  line-height: 0;
+}
+/* line 79, ../scss/stream.scss */
+#stream > .article.photo .image {
+  overflow: hidden;
+}
+/* line 81, ../scss/stream.scss */
+#stream > .article.photo .image img {
+  width: 100%;
+}

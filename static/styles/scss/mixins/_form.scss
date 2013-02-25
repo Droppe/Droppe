@@ -1,0 +1,12 @@
+@mixin input-text() {
+  @include border-radius(0);
+  -webkit-appearance: none;
+  height: 1.2em;
+  color: $tungsten;
+  border: 1px solid $mercury;
+  line-height: 1.2em;
+  padding: .2em .6em;
+  font-family: inherit;
+  @include box-shadow(inset $mercury 0 0 2px);
+  background-color: $snow;
+}

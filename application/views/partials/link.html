@@ -1,0 +1,18 @@
+<li id="link-{{__id}}" class="article link">
+  <div class="body">
+    {{#if image}}
+    <span class="image" style="background-image:url('{{image.url}}')">
+      <a target="_blank" href="{{url}}">{{url}}</a>
+    </span>
+    {{/if}}
+    <div class="content">
+      <h2><a target="_blank" href="{{url}}">{{oembed.title}}</a></h2>
+      <p>{{oembed.description}}</p>
+    </div>
+    <div class="meta">
+      <a class="source" href="{{provider.url}}">{{provider.name}}</a>
+      <a class="author" href="{{author.url}}">{{author.name}}</a>
+      <a class="view" href="{{url}}">&raquo;</a>
+    </div>
+  </div>
+</li>

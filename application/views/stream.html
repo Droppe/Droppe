@@ -1,0 +1,19 @@
+{{#extend "stylesheets"}}
+<link rel="stylesheet" href="/styles/css/stream.css">
+{{/extend}}
+
+{{#extend "title"}}{{title}}{{/extend}}
+
+{{#if articles}}
+<ul id="stream">
+  {{#articles}}
+    {{#if oembed.type}}
+      {{#partial oembed.type}}{{/partial}}
+    {{/if}}
+  {{/articles}}
+</ul>
+{{/if}}
+
+{{#extend "scripts"}}
+<script src="/scripts/stream.js"></script>
+{{/extend}}

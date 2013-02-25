@@ -1,0 +1,102 @@
+@import 'compass';
+@import 'susy';
+
+@import 'variables/grid';
+@import 'variables/font';
+@import 'variables/colors';
+
+@import 'mixins/button';
+@import 'mixins/form';
+
+html {
+  background-color: $mercury;
+}
+
+body {
+  padding: 0;
+  font-weight: 300;
+  line-height: 1.6em;
+  color: $tungsten;
+  font-family: $font-family;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+//Type
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  line-height: 1.2em;
+  text-shadow: 0 1px $mercury;
+  color: $licorice;
+  a {
+    color: inherit;
+  }
+  a:hover,
+  a:active {
+    color: $ocean;
+    text-decoration: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $ocean;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+#header {
+  @include box-shadow($steel 1px 0 1px);
+  background-color: rgba($snow, 0.5);
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  .content {
+    @include container;
+    max-width: $max-width;
+    min-width: $min-width;
+    #droppe-branding {
+      @include inline-block;
+      height: 2.4rem;
+      width: 2.4rem;
+      background: url('/assets/images/droppe.png') no-repeat center;
+      background-size: contain;
+      text-indent: -123456px;
+      margin: 0 0 0 .6rem;
+    }
+    #search {
+      @include inline-block;
+      margin-right: .6rem;
+      .text {
+        @include inline-block;
+        input {
+          @include input-text;
+        }
+      }
+      .submit {
+        @include inline-block;
+        @include button;
+      }
+    }
+  }
+}
+
+#page {
+  padding-top: 2.4rem;
+  width: 100%;
+  height: 100%;
+  .main {
+    @include container;
+    max-width: $max-width;
+    min-width: $min-width;
+  }
+}

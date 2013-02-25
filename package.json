@@ -1,0 +1,25 @@
+{
+  "name": "Droppe",
+  "engines": ["node >= 0.8.0"],
+  "main": "application.js",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "*",
+    "underscore": "*",
+    "embedly": "*",
+    "hbs": "*",
+    "underscore": "*",
+    "promised-io": "*",
+    "mongoose": "*",
+    "express-load": "*",
+    "node-uuid": "*",
+    "promised-io": "*",
+    "kue": "*",
+    "node-uuid": "*",
+    "oembed": "*"
+  },
+  "scripts": {
+    "start": "compass watch & supervisor -w ./ -n error application"
+  }
+}

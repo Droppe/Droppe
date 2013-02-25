@@ -1,0 +1,18 @@
+@mixin button() {
+  @include background(linear-gradient(top, rgba($snow,.2), rgba($licorice,.2)));
+  @include border-radius(2px);
+  border: 1px solid $magnesium;
+  border-top-color: $silver;
+  border-left-color: $silver;
+  background-color: $snow;
+  color: $tungsten;
+  text-shadow: 0 1px $snow;
+  margin: 0;
+  line-height: 1.2em;
+  padding: .2em .6em;
+  &:hover,
+  &:active,
+  &:focus {
+    @include background(linear-gradient(top, rgba($snow,.30), rgba($licorice,.30)));
+  }
+}
