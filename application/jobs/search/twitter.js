@@ -18,7 +18,6 @@ function findUrls(text) {
   // Regular expression to find FTP, HTTP(S) and email URLs.
   regexp = /\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))/ig;
 
-
   // Iterate through any URLs in the text.
   while((matchArray = regexp.exec(source)) !== null) {
     var token = matchArray[0];

@@ -3,21 +3,17 @@ var mongoose = require('mongoose'),
 
 Article = new mongoose.Schema({
   url: String,
+  title: String,
+  description: String,
+  type: String,
+  cache_age: Date,
+  width: Number,
+  height: Number,
+  html: String,
+  result: {type : mongoose.Schema.ObjectId, ref: 'Result'},
   oembed: {type : mongoose.Schema.ObjectId, ref: 'OEmbed'},
-  provider: {
-    url: String,
-    name: String
-  },
-  author: {
-    url: String,
-    name: String
-  },
-  image: {
-    url: String,
-    height: Number,
-    width: Number,
-    quality: Number
-  },
+  provider: {type : mongoose.Schema.ObjectId, ref: 'Provider'},
+  author: {type : mongoose.Schema.ObjectId, ref: 'Author'},
   created_at: {type : Date, default: Date.now},
   updated_at: {type : Date, default: Date.now}
 });

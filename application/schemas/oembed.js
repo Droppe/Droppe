@@ -17,8 +17,6 @@ var OEmbed = new mongoose.Schema({
   height: {type: String},
   html: {type: String},
   description: {type: String},
-  width: {type: Number},
-  height: {type: Number},
   created_at: {
     type: Date,
     default: Date.now

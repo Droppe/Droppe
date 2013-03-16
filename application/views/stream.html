@@ -7,8 +7,8 @@
 {{#if articles}}
 <ul id="stream">
   {{#articles}}
-    {{#if oembed.type}}
-      {{#partial oembed.type}}{{/partial}}
+    {{#if type}}
+      {{#partial type}}{{/partial}}
     {{/if}}
   {{/articles}}
 </ul>

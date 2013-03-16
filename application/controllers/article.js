@@ -6,7 +6,7 @@ var Deferred = require('promised-io/promise').Deferred,
 
 //Start Article Processors
 require('../jobs/article/article');
-require('../jobs/article/oembed');
+//require('../jobs/article/oembed');
 
 function status(code) {
   return {

@@ -17,9 +17,13 @@
     "promised-io": "*",
     "kue": "*",
     "node-uuid": "*",
-    "oembed": "*"
+    "oembed": "*",
+    "gramophone": "*",
+    "natural": "*",
+    "WNdb": "*",
+    "node.io": "*"
   },
   "scripts": {
-    "start": "compass watch & supervisor -w ./ -n error application"
+    "start": "compass watch & supervisor -w ./ -n exit application"
   }
 }

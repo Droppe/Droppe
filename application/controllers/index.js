@@ -13,33 +13,68 @@ exports.index = function (request, response) {
     promises = [],
     query = request.param('query');
 
-  Search.findOne({query: query}, function (err, search) {
-    if (err) throw err;
-    Result.find({processed: true}, function (err, results) {
-      var urls = [],
-        promises = [];
-
-      results.forEach(function (result, index) {
-        var deferred = new Promise.Deferred();
-
-        if(result.searches.indexOf(search.id) > -1) {
-          promises.push(deferred.promise);
-          Article.findOne({url:result.url}).populate('oembed').exec(function (err, article) {
-            if (err) throw err;
-            if (article) {
-              data.unshift(article);
-            }
-            deferred.resolve();
-          });
-          Promise.all(promises).then(function (deferrals) {
-            response.render('stream', {
-              title: 'Welcome to Droppe',
-              articles: data
-            });
-          });
-        }
-      });
+  function respond(articles) {
+    response.render('stream', {
+      title: 'Welcome to Droppe',
+      articles: articles
     });
-  });
+  }
+
+  if (query) {
+    Search.findOne({query: query}, function (err, search) {
+      if (err) {
+        throw err;
+      }
+
+      if (search) {
+        Result.find({processed: true}, function (err, results) {
+          if (err) {
+            throw error;
+          }
+
+          if (results) {
+            results.forEach(function (result) {
+              var deferred,
+                Model;
+
+              if(result.searches.indexOf(search.id) > -1) {
+                deferred = new Promise.Deferred();
+                promises.push(deferred.promise);
+
+                Model = Article.findOne({url:result.url});
+                Model.populate('author');
+                Model.populate('provider');
+
+                Model.exec(function (err, article) {
+                  if (err) {
+                    throw err;
+                  }
+
+                  // console.log('------------------');
+                  // console.log(article);
+                  // console.log('------------------');
+
+                  if (article) {
+                    data.unshift(article);
+                  }
+
+                  deferred.resolve();
+                });
+              };
+            });
+          }
+
+          Promise.all(promises).then(function (deferrals) {
+            respond(data);
+          });
+        });
+      } else {
+        respond();
+      }
+    });
+  } else {
+    respond();
+  }
+
 };
 
